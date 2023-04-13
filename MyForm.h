@@ -1,4 +1,5 @@
 #pragma once
+#include "HelpForm.h"
 
 namespace Komb {
 
@@ -60,6 +61,7 @@ namespace Komb {
 
 	private: String^ first_num;
 	private: String^ second_num;
+	private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -100,6 +102,7 @@ namespace Komb {
 			this->btn_result = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label_result = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->OperationTable->SuspendLayout();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
@@ -145,6 +148,7 @@ namespace Komb {
 			this->label1->Size = System::Drawing::Size(174, 26);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Выберите операцию:";
+			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// btn_perest
 			// 
@@ -202,6 +206,7 @@ namespace Komb {
 			this->label2->Size = System::Drawing::Size(295, 24);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Решение комбинаторных задач";
+			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
 			// 
 			// n_input
 			// 
@@ -291,12 +296,29 @@ namespace Komb {
 			this->label_result->Size = System::Drawing::Size(341, 21);
 			this->label_result->TabIndex = 8;
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Gray;
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Help;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button1->Location = System::Drawing::Point(0, 0);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(50, 50);
+			this->button1->TabIndex = 9;
+			this->button1->Text = L"\?";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Gray;
 			this->ClientSize = System::Drawing::Size(500, 350);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label_result);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->btn_result);
@@ -322,6 +344,18 @@ namespace Komb {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		// Create the ToolTip and associate with the Form container.
+		ToolTip^ TT = gcnew ToolTip;
+
+		// Set up the delays for the ToolTip.
+		TT->AutoPopDelay = 5000;
+		TT->InitialDelay = 1000;
+		TT->ReshowDelay = 500;
+		// Force the ToolTip text to be displayed whether or not the form is active.
+		TT->ShowAlways = true;
+
+		// Set up the ToolTip text for the Button and Checkbox.
+		TT->SetToolTip(this->button1, "Справка");
 	}
 	
 	private: System::Void btn_close_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -449,5 +483,13 @@ namespace Komb {
 			*res = fact(first_num) / fact(first_num - second_num);
 		
 	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	HelpForm^ f2 = gcnew HelpForm(); //Создаем новый экземпляр
+	f2->Show();
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
