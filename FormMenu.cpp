@@ -1,4 +1,4 @@
-#include "MyForm.h"
+#include "FormMenu.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -7,6 +7,6 @@ using namespace System::Windows::Forms;
 int main(array<String^>^ args) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-	Komb::MyForm form;
+	Komb::FormMenu form;
 	Application::Run(% form);
 }

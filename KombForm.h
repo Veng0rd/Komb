@@ -11,12 +11,12 @@ namespace Komb {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm
+	/// Сводка для KombForm
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
+	public ref class KombForm : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm(void)
+		KombForm(void)
 		{
 			InitializeComponent();
 			//
@@ -28,7 +28,7 @@ namespace Komb {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~MyForm()
+		~KombForm()
 		{
 			if (components)
 			{
@@ -86,7 +86,7 @@ namespace Komb {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(KombForm::typeid));
 			this->btn_close = (gcnew System::Windows::Forms::Button());
 			this->OperationTable = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -119,7 +119,7 @@ namespace Komb {
 			this->btn_close->Size = System::Drawing::Size(50, 50);
 			this->btn_close->TabIndex = 0;
 			this->btn_close->UseVisualStyleBackColor = true;
-			this->btn_close->Click += gcnew System::EventHandler(this, &MyForm::btn_close_Click);
+			this->btn_close->Click += gcnew System::EventHandler(this, &KombForm::btn_close_Click);
 			// 
 			// OperationTable
 			// 
@@ -148,7 +148,7 @@ namespace Komb {
 			this->label1->Size = System::Drawing::Size(174, 26);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Выберите операцию:";
-			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &KombForm::label1_Click);
 			// 
 			// btn_perest
 			// 
@@ -163,7 +163,7 @@ namespace Komb {
 			this->btn_perest->TabIndex = 2;
 			this->btn_perest->Text = L"Перестановка";
 			this->btn_perest->UseVisualStyleBackColor = true;
-			this->btn_perest->CheckedChanged += gcnew System::EventHandler(this, &MyForm::btn_CheckedChanged);
+			this->btn_perest->CheckedChanged += gcnew System::EventHandler(this, &KombForm::btn_CheckedChanged);
 			// 
 			// btn_razm
 			// 
@@ -178,7 +178,7 @@ namespace Komb {
 			this->btn_razm->TabIndex = 1;
 			this->btn_razm->Text = L"Размещение";
 			this->btn_razm->UseVisualStyleBackColor = true;
-			this->btn_razm->CheckedChanged += gcnew System::EventHandler(this, &MyForm::btn_CheckedChanged);
+			this->btn_razm->CheckedChanged += gcnew System::EventHandler(this, &KombForm::btn_CheckedChanged);
 			// 
 			// btn_soch
 			// 
@@ -193,7 +193,7 @@ namespace Komb {
 			this->btn_soch->TabIndex = 0;
 			this->btn_soch->Text = L"Сочетание";
 			this->btn_soch->UseVisualStyleBackColor = true;
-			this->btn_soch->CheckedChanged += gcnew System::EventHandler(this, &MyForm::btn_CheckedChanged);
+			this->btn_soch->CheckedChanged += gcnew System::EventHandler(this, &KombForm::btn_CheckedChanged);
 			// 
 			// label2
 			// 
@@ -206,7 +206,7 @@ namespace Komb {
 			this->label2->Size = System::Drawing::Size(295, 24);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Решение комбинаторных задач";
-			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
+			this->label2->Click += gcnew System::EventHandler(this, &KombForm::label2_Click);
 			// 
 			// n_input
 			// 
@@ -216,8 +216,8 @@ namespace Komb {
 			this->n_input->Name = L"n_input";
 			this->n_input->Size = System::Drawing::Size(126, 26);
 			this->n_input->TabIndex = 3;
-			this->n_input->TextChanged += gcnew System::EventHandler(this, &MyForm::n_input_TextChanged);
-			this->n_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::Check_KeyPress);
+			this->n_input->TextChanged += gcnew System::EventHandler(this, &KombForm::n_input_TextChanged);
+			this->n_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &KombForm::Check_KeyPress);
 			// 
 			// m_input
 			// 
@@ -227,8 +227,8 @@ namespace Komb {
 			this->m_input->Name = L"m_input";
 			this->m_input->Size = System::Drawing::Size(126, 26);
 			this->m_input->TabIndex = 4;
-			this->m_input->TextChanged += gcnew System::EventHandler(this, &MyForm::m_input_TextChanged);
-			this->m_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::Check_KeyPress);
+			this->m_input->TextChanged += gcnew System::EventHandler(this, &KombForm::m_input_TextChanged);
+			this->m_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &KombForm::Check_KeyPress);
 			// 
 			// panel1
 			// 
@@ -274,7 +274,7 @@ namespace Komb {
 			this->btn_result->TabIndex = 6;
 			this->btn_result->Text = L"Посчитать";
 			this->btn_result->UseVisualStyleBackColor = true;
-			this->btn_result->Click += gcnew System::EventHandler(this, &MyForm::btn_result_Click);
+			this->btn_result->Click += gcnew System::EventHandler(this, &KombForm::btn_result_Click);
 			// 
 			// label3
 			// 
@@ -310,14 +310,14 @@ namespace Komb {
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"\?";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &KombForm::button1_Click);
 			// 
-			// MyForm
+			// KombForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Gray;
-			this->ClientSize = System::Drawing::Size(500, 350);
+			this->ClientSize = System::Drawing::Size(484, 311);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label_result);
 			this->Controls->Add(this->label3);
@@ -330,10 +330,10 @@ namespace Komb {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(500, 350);
 			this->MinimumSize = System::Drawing::Size(500, 350);
-			this->Name = L"MyForm";
+			this->Name = L"KombForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Комбинаторика";
-			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			this->Load += gcnew System::EventHandler(this, &KombForm::MyForm_Load);
 			this->OperationTable->ResumeLayout(false);
 			this->OperationTable->PerformLayout();
 			this->panel1->ResumeLayout(false);

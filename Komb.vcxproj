@@ -121,23 +121,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FormMenu.cpp" />
     <ClCompile Include="HelpForm.cpp" />
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="KombForm.cpp" />
+    <ClCompile Include="NumberForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FormMenu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="HelpForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="KombForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="NumberForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
+    <EmbeddedResource Include="KombForm.resx">
+      <DependentUpon>KombForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberForm.resx">
+      <DependentUpon>NumberForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
