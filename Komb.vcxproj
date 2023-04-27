@@ -121,13 +121,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EasyNumForm.cpp" />
     <ClCompile Include="FormMenu.cpp" />
+    <ClCompile Include="HardNumForm.cpp" />
     <ClCompile Include="HelpForm.cpp" />
     <ClCompile Include="KombForm.cpp" />
+    <ClCompile Include="MiddleNumForm.cpp" />
     <ClCompile Include="NumberForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EasyNumForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormMenu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="HardNumForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="HelpForm.h">
@@ -136,11 +145,17 @@
     <ClInclude Include="KombForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MiddleNumForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="NumberForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EasyNumForm.resx">
+      <DependentUpon>EasyNumForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.h</DependentUpon>
     </EmbeddedResource>

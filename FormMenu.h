@@ -162,9 +162,13 @@ namespace Komb {
 
 private: System::Void FormMenu_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	NumberForm^ f3 = gcnew NumberForm(); //Создаем новый экземпляр
-	f3->Show();
+	this->Hide();
+	f3->ShowDialog();
+	this->Show();
 }
 };
 }
