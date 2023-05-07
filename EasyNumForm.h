@@ -77,6 +77,7 @@ namespace Komb {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(0, 48);
 			this->label2->TabIndex = 1;
+			this->label2->Click += gcnew System::EventHandler(this, &EasyNumForm::button1_Click);
 			// 
 			// label1
 			// 
@@ -87,6 +88,7 @@ namespace Komb {
 			this->label1->Size = System::Drawing::Size(113, 19);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Число попыток:";
+			this->label1->Click += gcnew System::EventHandler(this, &EasyNumForm::button1_Click);
 			// 
 			// label3
 			// 
@@ -97,6 +99,7 @@ namespace Komb {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(0, 27);
 			this->label3->TabIndex = 3;
+			this->label3->Click += gcnew System::EventHandler(this, &EasyNumForm::button1_Click);
 			// 
 			// input
 			// 
@@ -107,6 +110,7 @@ namespace Komb {
 			this->input->Name = L"input";
 			this->input->Size = System::Drawing::Size(126, 26);
 			this->input->TabIndex = 5;
+			this->input->Click += gcnew System::EventHandler(this, &EasyNumForm::button1_Click);
 			this->input->TextChanged += gcnew System::EventHandler(this, &EasyNumForm::enable_btn);
 			this->input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &EasyNumForm::Check_KeyPress);
 			// 
@@ -150,17 +154,18 @@ namespace Komb {
 		this->label3->Text = System::Convert::ToString(chance);
 	}
 
-		private: System::Void Check_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-			if ((e->KeyChar < 48 || e->KeyChar > 57) && e->KeyChar != '\b')
-				e->Handled = true;
-		}
+	private: System::Void Check_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if ((e->KeyChar < 48 || e->KeyChar > 57) && e->KeyChar != '\b')
+			e->Handled = true;
+	}
+
 	private: System::Void enable_btn(System::Object^ sender, System::EventArgs^ e) {
 		if (this->input->TextLength > 0)
 			button1->Enabled = true;
 		else
 			button1->Enabled = false;
-
 	}
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		int num = System::Convert::ToInt32(this->input->Text);
 		int random = System::Convert::ToInt32(this->label2->Text);
@@ -190,9 +195,16 @@ namespace Komb {
 			if (chance == 1)
 			{
 				MessageBox::Show(this, "Вы проиграли!\nЗагаданное число - " + random, "Вы проиграли", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				this->Close();
 			}
 		}
 
 	}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

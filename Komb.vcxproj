@@ -165,6 +165,9 @@
     <EmbeddedResource Include="KombForm.resx">
       <DependentUpon>KombForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MiddleNumForm.resx">
+      <DependentUpon>MiddleNumForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NumberForm.resx">
       <DependentUpon>NumberForm.h</DependentUpon>
     </EmbeddedResource>
