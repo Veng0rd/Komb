@@ -150,7 +150,7 @@ namespace Komb {
 		int random = rand() % 10; // Рандомное число
 		this->label2->Text = System::Convert::ToString(random);
 
-		int chance = 5;
+		int chance = 4;
 		this->label3->Text = System::Convert::ToString(chance);
 	}
 
