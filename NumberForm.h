@@ -109,7 +109,7 @@ namespace Komb {
 			this->panel1->Controls->Add(this->radioButton1);
 			this->panel1->Controls->Add(this->radioButton3);
 			this->panel1->Controls->Add(this->radioButton2);
-			this->panel1->Location = System::Drawing::Point(50, 118);
+			this->panel1->Location = System::Drawing::Point(31, 112);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(465, 105);
 			this->panel1->TabIndex = 3;
@@ -119,7 +119,7 @@ namespace Komb {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Himalaya", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(104, 26);
+			this->label1->Location = System::Drawing::Point(85, 20);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(340, 24);
 			this->label1->TabIndex = 4;
@@ -131,7 +131,7 @@ namespace Komb {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Himalaya", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(46, 80);
+			this->label2->Location = System::Drawing::Point(27, 74);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(143, 21);
 			this->label2->TabIndex = 5;
@@ -141,7 +141,7 @@ namespace Komb {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Himalaya", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(155, 229);
+			this->button1->Location = System::Drawing::Point(136, 223);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(252, 62);
 			this->button1->TabIndex = 6;
@@ -153,13 +153,14 @@ namespace Komb {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(559, 324);
+			this->ClientSize = System::Drawing::Size(524, 301);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->Name = L"NumberForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Игровая программа \"Угадай число\"";
 			this->Load += gcnew System::EventHandler(this, &NumberForm::NumberForm_Load);
 			this->panel1->ResumeLayout(false);

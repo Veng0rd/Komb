@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "HelpForm.h"
 
 namespace Komb {
@@ -11,7 +11,7 @@ namespace Komb {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для KombForm
+	/// РЎРІРѕРґРєР° РґР»СЏ KombForm
 	/// </summary>
 	public ref class KombForm : public System::Windows::Forms::Form
 	{
@@ -20,13 +20,13 @@ namespace Komb {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~KombForm()
 		{
@@ -35,7 +35,7 @@ namespace Komb {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ btn_close;
+
 	private: System::Windows::Forms::Panel^ OperationTable;
 	private: System::Windows::Forms::RadioButton^ btn_razm;
 
@@ -62,6 +62,7 @@ namespace Komb {
 	private: String^ first_num;
 	private: String^ second_num;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Label^ label4;
 
 
 
@@ -75,30 +76,30 @@ namespace Komb {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(KombForm::typeid));
-			this->btn_close = (gcnew System::Windows::Forms::Button());
 			this->OperationTable = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btn_perest = (gcnew System::Windows::Forms::RadioButton());
 			this->btn_razm = (gcnew System::Windows::Forms::RadioButton());
 			this->btn_soch = (gcnew System::Windows::Forms::RadioButton());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->n_input = (gcnew System::Windows::Forms::TextBox());
-			this->m_input = (gcnew System::Windows::Forms::TextBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label_m = (gcnew System::Windows::Forms::Label());
 			this->label_n = (gcnew System::Windows::Forms::Label());
+			this->n_input = (gcnew System::Windows::Forms::TextBox());
+			this->m_input = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->btn_result = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label_result = (gcnew System::Windows::Forms::Label());
@@ -107,20 +108,6 @@ namespace Komb {
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// btn_close
-			// 
-			this->btn_close->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->btn_close->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->btn_close->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btn_close->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btn_close.Image")));
-			this->btn_close->Location = System::Drawing::Point(450, 0);
-			this->btn_close->Margin = System::Windows::Forms::Padding(0);
-			this->btn_close->Name = L"btn_close";
-			this->btn_close->Size = System::Drawing::Size(50, 50);
-			this->btn_close->TabIndex = 0;
-			this->btn_close->UseVisualStyleBackColor = true;
-			this->btn_close->Click += gcnew System::EventHandler(this, &KombForm::btn_close_Click);
-			// 
 			// OperationTable
 			// 
 			this->OperationTable->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom));
@@ -128,13 +115,14 @@ namespace Komb {
 			this->OperationTable->Controls->Add(this->btn_perest);
 			this->OperationTable->Controls->Add(this->btn_razm);
 			this->OperationTable->Controls->Add(this->btn_soch);
+			this->OperationTable->Controls->Add(this->panel1);
 			this->OperationTable->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->OperationTable->Location = System::Drawing::Point(0, 80);
+			this->OperationTable->Location = System::Drawing::Point(22, 80);
 			this->OperationTable->Margin = System::Windows::Forms::Padding(0);
 			this->OperationTable->Name = L"OperationTable";
 			this->OperationTable->Padding = System::Windows::Forms::Padding(5);
-			this->OperationTable->Size = System::Drawing::Size(500, 80);
+			this->OperationTable->Size = System::Drawing::Size(500, 191);
 			this->OperationTable->TabIndex = 1;
 			// 
 			// label1
@@ -147,7 +135,7 @@ namespace Komb {
 			this->label1->Padding = System::Windows::Forms::Padding(3);
 			this->label1->Size = System::Drawing::Size(174, 26);
 			this->label1->TabIndex = 3;
-			this->label1->Text = L"Выберите операцию:";
+			this->label1->Text = L"Р’С‹Р±РµСЂРёС‚Рµ РѕРїРµСЂР°С†РёСЋ:";
 			this->label1->Click += gcnew System::EventHandler(this, &KombForm::label1_Click);
 			// 
 			// btn_perest
@@ -161,7 +149,7 @@ namespace Komb {
 			this->btn_perest->Padding = System::Windows::Forms::Padding(3);
 			this->btn_perest->Size = System::Drawing::Size(142, 30);
 			this->btn_perest->TabIndex = 2;
-			this->btn_perest->Text = L"Перестановка";
+			this->btn_perest->Text = L"РџРµСЂРµСЃС‚Р°РЅРѕРІРєР°";
 			this->btn_perest->UseVisualStyleBackColor = true;
 			this->btn_perest->CheckedChanged += gcnew System::EventHandler(this, &KombForm::btn_CheckedChanged);
 			// 
@@ -176,7 +164,7 @@ namespace Komb {
 			this->btn_razm->Padding = System::Windows::Forms::Padding(3);
 			this->btn_razm->Size = System::Drawing::Size(129, 30);
 			this->btn_razm->TabIndex = 1;
-			this->btn_razm->Text = L"Размещение";
+			this->btn_razm->Text = L"Р Р°Р·РјРµС‰РµРЅРёРµ";
 			this->btn_razm->UseVisualStyleBackColor = true;
 			this->btn_razm->CheckedChanged += gcnew System::EventHandler(this, &KombForm::btn_CheckedChanged);
 			// 
@@ -191,62 +179,39 @@ namespace Komb {
 			this->btn_soch->Padding = System::Windows::Forms::Padding(3);
 			this->btn_soch->Size = System::Drawing::Size(116, 30);
 			this->btn_soch->TabIndex = 0;
-			this->btn_soch->Text = L"Сочетание";
+			this->btn_soch->Text = L"РЎРѕС‡РµС‚Р°РЅРёРµ";
 			this->btn_soch->UseVisualStyleBackColor = true;
 			this->btn_soch->CheckedChanged += gcnew System::EventHandler(this, &KombForm::btn_CheckedChanged);
 			// 
-			// label2
-			// 
-			this->label2->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(100, 25);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(295, 24);
-			this->label2->TabIndex = 2;
-			this->label2->Text = L"Решение комбинаторных задач";
-			this->label2->Click += gcnew System::EventHandler(this, &KombForm::label2_Click);
-			// 
-			// n_input
-			// 
-			this->n_input->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->n_input->Location = System::Drawing::Point(77, 23);
-			this->n_input->Name = L"n_input";
-			this->n_input->Size = System::Drawing::Size(126, 26);
-			this->n_input->TabIndex = 3;
-			this->n_input->TextChanged += gcnew System::EventHandler(this, &KombForm::n_input_TextChanged);
-			this->n_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &KombForm::Check_KeyPress);
-			// 
-			// m_input
-			// 
-			this->m_input->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->m_input->Location = System::Drawing::Point(323, 23);
-			this->m_input->Name = L"m_input";
-			this->m_input->Size = System::Drawing::Size(126, 26);
-			this->m_input->TabIndex = 4;
-			this->m_input->TextChanged += gcnew System::EventHandler(this, &KombForm::m_input_TextChanged);
-			this->m_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &KombForm::Check_KeyPress);
-			// 
 			// panel1
 			// 
+			this->panel1->Controls->Add(this->label4);
 			this->panel1->Controls->Add(this->label_m);
 			this->panel1->Controls->Add(this->label_n);
 			this->panel1->Controls->Add(this->n_input);
 			this->panel1->Controls->Add(this->m_input);
-			this->panel1->Location = System::Drawing::Point(0, 163);
+			this->panel1->Location = System::Drawing::Point(1, 74);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(500, 70);
+			this->panel1->Size = System::Drawing::Size(499, 114);
 			this->panel1->TabIndex = 5;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->Location = System::Drawing::Point(32, 17);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(96, 20);
+			this->label4->TabIndex = 7;
+			this->label4->Text = L"Р¤РѕСЂРјСѓР»Р°: ";
 			// 
 			// label_m
 			// 
 			this->label_m->AutoSize = true;
 			this->label_m->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label_m->Location = System::Drawing::Point(275, 25);
+			this->label_m->Location = System::Drawing::Point(274, 62);
 			this->label_m->Name = L"label_m";
 			this->label_m->Size = System::Drawing::Size(42, 24);
 			this->label_m->TabIndex = 6;
@@ -257,22 +222,57 @@ namespace Komb {
 			this->label_n->AutoSize = true;
 			this->label_n->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label_n->Location = System::Drawing::Point(34, 25);
+			this->label_n->Location = System::Drawing::Point(33, 62);
 			this->label_n->Name = L"label_n";
 			this->label_n->Size = System::Drawing::Size(37, 24);
 			this->label_n->TabIndex = 5;
 			this->label_n->Text = L"n =";
+			// 
+			// n_input
+			// 
+			this->n_input->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->n_input->Location = System::Drawing::Point(76, 60);
+			this->n_input->Name = L"n_input";
+			this->n_input->Size = System::Drawing::Size(126, 26);
+			this->n_input->TabIndex = 3;
+			this->n_input->TextChanged += gcnew System::EventHandler(this, &KombForm::n_input_TextChanged);
+			this->n_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &KombForm::Check_KeyPress);
+			// 
+			// m_input
+			// 
+			this->m_input->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->m_input->Location = System::Drawing::Point(322, 60);
+			this->m_input->Name = L"m_input";
+			this->m_input->Size = System::Drawing::Size(126, 26);
+			this->m_input->TabIndex = 4;
+			this->m_input->TextChanged += gcnew System::EventHandler(this, &KombForm::m_input_TextChanged);
+			this->m_input->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &KombForm::Check_KeyPress);
+			// 
+			// label2
+			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(122, 47);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(295, 24);
+			this->label2->TabIndex = 2;
+			this->label2->Text = L"Р РµС€РµРЅРёРµ РєРѕРјР±РёРЅР°С‚РѕСЂРЅС‹С… Р·Р°РґР°С‡";
+			this->label2->Click += gcnew System::EventHandler(this, &KombForm::label2_Click);
 			// 
 			// btn_result
 			// 
 			this->btn_result->Enabled = false;
 			this->btn_result->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->btn_result->Location = System::Drawing::Point(191, 239);
+			this->btn_result->Location = System::Drawing::Point(207, 274);
 			this->btn_result->Name = L"btn_result";
 			this->btn_result->Size = System::Drawing::Size(126, 32);
 			this->btn_result->TabIndex = 6;
-			this->btn_result->Text = L"Посчитать";
+			this->btn_result->Text = L"РџРѕСЃС‡РёС‚Р°С‚СЊ";
 			this->btn_result->UseVisualStyleBackColor = true;
 			this->btn_result->Click += gcnew System::EventHandler(this, &KombForm::btn_result_Click);
 			// 
@@ -281,30 +281,30 @@ namespace Komb {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(34, 293);
+			this->label3->Location = System::Drawing::Point(22, 328);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(72, 24);
 			this->label3->TabIndex = 7;
-			this->label3->Text = L"Ответ:";
+			this->label3->Text = L"РћС‚РІРµС‚:";
 			// 
 			// label_result
 			// 
 			this->label_result->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label_result->Location = System::Drawing::Point(112, 296);
+			this->label_result->Location = System::Drawing::Point(100, 331);
 			this->label_result->Name = L"label_result";
 			this->label_result->Size = System::Drawing::Size(341, 21);
 			this->label_result->TabIndex = 8;
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::Gray;
+			this->button1->BackColor = System::Drawing::SystemColors::Control;
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Help;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(0, 0);
+			this->button1->Location = System::Drawing::Point(0, 1);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(50, 50);
 			this->button1->TabIndex = 9;
@@ -316,23 +316,20 @@ namespace Komb {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::Gray;
-			this->ClientSize = System::Drawing::Size(484, 311);
+			this->BackColor = System::Drawing::SystemColors::Control;
+			this->ClientSize = System::Drawing::Size(544, 401);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label_result);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->btn_result);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->OperationTable);
-			this->Controls->Add(this->btn_close);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->MaximumSize = System::Drawing::Size(500, 350);
-			this->MinimumSize = System::Drawing::Size(500, 350);
+			this->MaximumSize = System::Drawing::Size(560, 440);
+			this->MinimumSize = System::Drawing::Size(560, 440);
 			this->Name = L"KombForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Комбинаторика";
+			this->Text = L"РљРѕРјР±РёРЅР°С‚РѕСЂРёРєР°";
 			this->Load += gcnew System::EventHandler(this, &KombForm::MyForm_Load);
 			this->OperationTable->ResumeLayout(false);
 			this->OperationTable->PerformLayout();
@@ -355,7 +352,7 @@ namespace Komb {
 		TT->ShowAlways = true;
 
 		// Set up the ToolTip text for the Button and Checkbox.
-		TT->SetToolTip(this->button1, "Справка");
+		TT->SetToolTip(this->button1, "РЎРїСЂР°РІРєР°");
 	}
 	
 	private: System::Void btn_close_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -367,6 +364,11 @@ namespace Komb {
 	private: System::Void Check_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		if ((e->KeyChar < 48 || e->KeyChar > 57) && e->KeyChar != '\b')
 			e->Handled = true;
+
+		if (static_cast<bool>(Control::ModifierKeys & Keys::Control) && (e->KeyChar == 'V'))
+		{
+			e->Handled = true;
+		}
 	}
 
 
@@ -379,9 +381,15 @@ namespace Komb {
 	}
 
 	private: System::Void enable_btn_res() {
+		if (this->btn_soch->Checked)
+			label4->Text = L"Р¤РѕСЂРјСѓР»Р°: Cв‚™бµђ = n! / (m!(n - m)!)";
 
-		if (this->btn_perest->Checked) // если вкл перстановка, второе поле отключается
+		if (this->btn_razm->Checked)
+			label4->Text = L"Р¤РѕСЂРјСѓР»Р°: Aв‚™бµђ = n! / (n - m)!";
+
+		if (this->btn_perest->Checked) // РµСЃР»Рё РІРєР» РїРµСЂСЃС‚Р°РЅРѕРІРєР°, РІС‚РѕСЂРѕРµ РїРѕР»Рµ РѕС‚РєР»СЋС‡Р°РµС‚СЃСЏ
 		{
+			label4->Text = L"Р¤РѕСЂРјСѓР»Р°: Pв‚™ = n!";
 			m_input->Enabled = false;
 			m_input->Visible = false;
 			label_m->Visible = false;
@@ -393,7 +401,7 @@ namespace Komb {
 			label_m->Visible = true;
 		}
 
-		if (this->btn_perest->Checked == false) // проверка если выбрана операция и введены числа, то кнопка активна, иначе нет
+		if (this->btn_perest->Checked == false) // РїСЂРѕРІРµСЂРєР° РµСЃР»Рё РІС‹Р±СЂР°РЅР° РѕРїРµСЂР°С†РёСЏ Рё РІРІРµРґРµРЅС‹ С‡РёСЃР»Р°, С‚Рѕ РєРЅРѕРїРєР° Р°РєС‚РёРІРЅР°, РёРЅР°С‡Рµ РЅРµС‚
 		{
 			if (this->n_input->Text != "" && this->m_input->Text != "" && (this->btn_razm->Checked == true || this->btn_soch->Checked == true))
 			{
@@ -418,14 +426,14 @@ namespace Komb {
 		
 	}
 
-	private: System::Void made_result() { // нажатие на кнопку
+	private: System::Void made_result() { // РЅР°Р¶Р°С‚РёРµ РЅР° РєРЅРѕРїРєСѓ
 		double first_num = System::Convert::ToDouble(this->n_input->Text);
 		double result;
 		if (btn_perest->Checked == true)
 		{
 			result = fact(first_num);
 			if (result <= 0)
-				MessageBox::Show(this, "Слишком большое число", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				MessageBox::Show(this, "РЎР»РёС€РєРѕРј Р±РѕР»СЊС€РѕРµ С‡РёСЃР»Рѕ", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			else
 				this->label_result->Text = System::Convert::ToString(result);
 			
@@ -433,9 +441,9 @@ namespace Komb {
 		else {
 			double second_num = System::Convert::ToDouble(this->m_input->Text);
 			if (second_num > first_num)
-				MessageBox::Show(this, "Число n должно быть больше или равно числу m", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				MessageBox::Show(this, "Р§РёСЃР»Рѕ n РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РёР»Рё СЂР°РІРЅРѕ С‡РёСЃР»Сѓ m", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			else if (first_num == 0 || second_num == 0)
-				MessageBox::Show(this, "Одно из чисел равно 0", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				MessageBox::Show(this, "РћРґРЅРѕ РёР· С‡РёСЃРµР» СЂР°РІРЅРѕ 0", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			else {
 				if (btn_soch->Checked == true) {
 					made_soch(first_num, second_num, &result);
@@ -471,21 +479,23 @@ namespace Komb {
 
 	private: System::Void made_soch(double first_num, double second_num, double*res) {
 		if (fact(first_num) <= 0 || (fact(second_num) * fact(first_num - second_num)) <= 0)
-			MessageBox::Show(this, "Слишком большое число", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show(this, "РЎР»РёС€РєРѕРј Р±РѕР»СЊС€РѕРµ С‡РёСЃР»Рѕ", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		else
 			*res = fact(first_num) / (fact(second_num) * fact(first_num - second_num));
 	}
 
 	private: System::Void made_razm(double first_num, double second_num, double* res) {
 		if (fact(first_num - second_num) <= 0 || fact(first_num) <= 0)
-			MessageBox::Show(this, "Слишком большое число", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show(this, "РЎР»РёС€РєРѕРј Р±РѕР»СЊС€РѕРµ С‡РёСЃР»Рѕ", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		else
 			*res = fact(first_num) / fact(first_num - second_num);
 		
 	}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	HelpForm^ f2 = gcnew HelpForm(); //Создаем новый экземпляр
-	f2->Show();
+	HelpForm^ f2 = gcnew HelpForm(); //РЎРѕР·РґР°РµРј РЅРѕРІС‹Р№ СЌРєР·РµРјРїР»СЏСЂ
+	this->Hide();
+	f2->ShowDialog();
+	this->Show();
 }
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }

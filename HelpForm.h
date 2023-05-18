@@ -43,7 +43,7 @@ namespace Komb {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::Button^ btn_close;
+
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label12;
@@ -72,7 +72,6 @@ namespace Komb {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(HelpForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -82,7 +81,6 @@ namespace Komb {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->btn_close = (gcnew System::Windows::Forms::Button());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
@@ -203,20 +201,6 @@ namespace Komb {
 			this->label9->Text = L"n = 3";
 			this->label9->Click += gcnew System::EventHandler(this, &HelpForm::label9_Click);
 			// 
-			// btn_close
-			// 
-			this->btn_close->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->btn_close->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->btn_close->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btn_close->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btn_close.Image")));
-			this->btn_close->Location = System::Drawing::Point(745, -1);
-			this->btn_close->Margin = System::Windows::Forms::Padding(0);
-			this->btn_close->Name = L"btn_close";
-			this->btn_close->Size = System::Drawing::Size(50, 50);
-			this->btn_close->TabIndex = 9;
-			this->btn_close->UseVisualStyleBackColor = true;
-			this->btn_close->Click += gcnew System::EventHandler(this, &HelpForm::btn_close_Click);
-			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
@@ -262,6 +246,7 @@ namespace Komb {
 			this->label13->Size = System::Drawing::Size(145, 20);
 			this->label13->TabIndex = 13;
 			this->label13->Text = L"Aₙᵐ = n! / (n - m)!";
+			this->label13->Click += gcnew System::EventHandler(this, &HelpForm::label13_Click);
 			// 
 			// label14
 			// 
@@ -330,6 +315,7 @@ namespace Komb {
 			this->label19->Size = System::Drawing::Size(176, 20);
 			this->label19->TabIndex = 19;
 			this->label19->Text = L"Cₙᵐ = n! / (m!(n - m)!)";
+			this->label19->Click += gcnew System::EventHandler(this, &HelpForm::label19_Click);
 			// 
 			// label20
 			// 
@@ -369,8 +355,8 @@ namespace Komb {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(794, 561);
+			this->BackColor = System::Drawing::SystemColors::Control;
+			this->ClientSize = System::Drawing::Size(804, 561);
 			this->Controls->Add(this->label21);
 			this->Controls->Add(this->label22);
 			this->Controls->Add(this->label20);
@@ -384,7 +370,6 @@ namespace Komb {
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
-			this->Controls->Add(this->btn_close);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
@@ -394,12 +379,14 @@ namespace Komb {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->MaximumSize = System::Drawing::Size(820, 600);
+			this->MinimumSize = System::Drawing::Size(820, 600);
 			this->Name = L"HelpForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"HelpForm";
+			this->Text = L"Справка";
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -412,6 +399,10 @@ private: System::Void btn_close_Click(System::Object^ sender, System::EventArgs^
 	this->Close();
 }
 private: System::Void label11_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label19_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
